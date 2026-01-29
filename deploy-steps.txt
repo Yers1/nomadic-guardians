@@ -24,7 +24,25 @@ git commit -m "Initial commit - Nomadic Guardians website"
 7. Нажмите "Create repository"
 
 
-ШАГ 3: Загрузка кода на GitHub
+ШАГ 3: Создание Personal Access Token (PAT) на GitHub
+───────────────────────────────────────────────────────
+
+GitHub больше не принимает обычные пароли. Нужен токен:
+
+1. Перейдите на https://github.com
+2. Нажмите на ваш аватар (правый верхний угол) → Settings
+3. В левом меню выберите: Developer settings
+4. Выберите: Personal access tokens → Tokens (classic)
+6. Заполните:
+   - Note: "Vercel Deploy" (любое название)
+   - Expiration: выберите срок (например, 90 days)
+   - Отметьте галочку: repo (полный доступ к репозиториям)
+7. Нажмите: Generate token
+8. ⚠️ ВАЖНО: Скопируйте токен СРАЗУ (он показывается только один раз!)
+   Токен выглядит так: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+ШАГ 4: Загрузка кода на GitHub
 ────────────────────────────────
 
 В PowerShell выполните (замените USERNAME на ваш GitHub username):
@@ -33,10 +51,13 @@ git remote add origin https://github.com/USERNAME/nomadic-guardians.git
 git branch -M main
 git push -u origin main
 
-Введите ваш GitHub username и password (или токен)
+Когда попросит:
+- Username: введите ваш GitHub username
+- Password: вставьте токен (который вы скопировали на шаге 3)
+   (НЕ ваш обычный пароль, а токен типа ghp_xxxxx...)
 
 
-ШАГ 4: Деплой на Vercel
+ШАГ 5: Деплой на Vercel
 ────────────────────────
 
 1. Перейдите на https://vercel.com
@@ -52,7 +73,7 @@ git push -u origin main
 8. Подождите 1-2 минуты
 
 
-ШАГ 5: Готово! 🎉
+ШАГ 6: Готово! 🎉
 ──────────────────
 
 Ваш сайт будет доступен по адресу:
