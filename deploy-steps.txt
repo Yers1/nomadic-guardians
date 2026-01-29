@@ -1,0 +1,79 @@
+═══════════════════════════════════════════════════════
+  БЕСПЛАТНЫЙ ДЕПЛОЙ НА VERCEL - ПОШАГОВАЯ ИНСТРУКЦИЯ
+═══════════════════════════════════════════════════════
+
+ШАГ 1: Подготовка проекта для GitHub
+─────────────────────────────────────
+
+Откройте PowerShell в папке проекта и выполните:
+
+git init
+git add .
+git commit -m "Initial commit - Nomadic Guardians website"
+
+
+ШАГ 2: Создание репозитория на GitHub
+──────────────────────────────────────
+
+1. Перейдите на https://github.com
+2. Войдите в аккаунт (или создайте новый)
+3. Нажмите "+" в правом верхнем углу → "New repository"
+4. Название: nomadic-guardians
+5. Выберите "Public" (или Private)
+6. НЕ ставьте галочки на "Add README", ".gitignore", "license"
+7. Нажмите "Create repository"
+
+
+ШАГ 3: Загрузка кода на GitHub
+────────────────────────────────
+
+В PowerShell выполните (замените USERNAME на ваш GitHub username):
+
+git remote add origin https://github.com/USERNAME/nomadic-guardians.git
+git branch -M main
+git push -u origin main
+
+Введите ваш GitHub username и password (или токен)
+
+
+ШАГ 4: Деплой на Vercel
+────────────────────────
+
+1. Перейдите на https://vercel.com
+2. Нажмите "Sign Up" → выберите "Continue with GitHub"
+3. Разрешите доступ к GitHub
+4. Нажмите "Add New Project"
+5. Выберите репозиторий "nomadic-guardians"
+6. Vercel автоматически определит:
+   - Framework: Next.js
+   - Build Command: npm run build
+   - Output Directory: .next
+7. Нажмите "Deploy"
+8. Подождите 1-2 минуты
+
+
+ШАГ 5: Готово! 🎉
+──────────────────
+
+Ваш сайт будет доступен по адресу:
+https://nomadic-guardians-XXXXX.vercel.app
+
+(XXXXX - случайные символы, или можно настроить свой домен)
+
+
+═══════════════════════════════════════════════════════
+  АЛЬТЕРНАТИВА: Деплой через Vercel CLI
+═══════════════════════════════════════════════════════
+
+Если хотите деплоить через командную строку:
+
+1. Установите Vercel CLI:
+   npm install -g vercel
+
+2. В папке проекта выполните:
+   vercel
+
+3. Следуйте инструкциям в терминале
+
+═══════════════════════════════════════════════════════
+

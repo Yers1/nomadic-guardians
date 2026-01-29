@@ -1,0 +1,168 @@
+{
+  "nav": {
+    "home": "Home",
+    "articles": "Articles",
+    "telegramBot": "Telegram Bot",
+    "resources": "Resources",
+    "files": "Files",
+    "admin": "Admin"
+  },
+  "home": {
+    "title": "Nomadic Guardians",
+    "subtitle": "SeaPerch West Asia 2026",
+    "status": "The only team representing Central Asia",
+    "description": "We are Nomadic Guardians, a school STEM team specializing in underwater robotics, participating in international SeaPerch West Asia 2026 competitions.",
+    "mission": {
+      "title": "Mission",
+      "content": "To advance underwater robotics education and innovation in Central Asia, representing our region on the international stage through excellence in engineering and teamwork."
+    },
+    "goals": {
+      "title": "Goals",
+      "items": [
+        "Design and build a competitive SeaPerch ROV",
+        "Excel in technical design and competition performance",
+        "Promote STEM education in Kazakhstan",
+        "Build international connections with other teams"
+      ]
+    },
+    "plans": {
+      "title": "Plans",
+      "items": [
+        "Complete Technical Design Report",
+        "Finalize ROV construction and testing",
+        "Participate in SeaPerch West Asia 2026",
+        "Share knowledge through articles and community outreach"
+      ]
+    },
+    "sponsor": {
+      "title": "Our Sponsor",
+      "description": "We are grateful for the support of our sponsor, who enables us to participate in international competitions and advance STEM education."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "articles": "Articles",
+      "resources": "Resources",
+      "files": "Files",
+      "telegramBot": "Telegram Bot"
+    }
+  },
+  "articles": {
+    "title": "Articles",
+    "subtitle": "Engineering insights and team updates",
+    "noArticles": "No articles yet. Check back soon!",
+    "readMore": "Read More",
+    "author": "Author",
+    "date": "Date",
+    "topics": {
+      "engineering": "Engineering Solutions",
+      "design": "ROV Design",
+      "lessons": "Lessons Learned",
+      "preparation": "Competition Preparation"
+    }
+  },
+  "telegramBot": {
+    "title": "Telegram Bot",
+    "subtitle": "Your SeaPerch Assistant",
+    "description": "Our Telegram bot helps answer questions about the SeaPerch Manual Book. Ask it anything about rules, regulations, technical specifications, and competition guidelines.",
+    "features": {
+      "title": "Features",
+      "items": [
+        "Answers questions about SeaPerch Manual Book",
+        "Provides competition rules and regulations",
+        "Explains technical specifications",
+        "Offers guidance on ROV design and construction"
+      ]
+    },
+    "examples": {
+      "title": "Example Questions",
+      "items": [
+        "What are the size restrictions for the ROV?",
+        "What materials can I use for construction?",
+        "What are the competition tasks?",
+        "How is the Technical Design Report evaluated?"
+      ]
+    },
+    "openBot": "Open Telegram Bot"
+  },
+  "resources": {
+    "title": "Resources",
+    "subtitle": "Educational materials and references",
+    "categories": {
+      "manuals": {
+        "title": "SeaPerch Manuals & Rules",
+        "description": "Official documentation and competition rules"
+      },
+      "stem": {
+        "title": "STEM Resources",
+        "description": "Engineering and science educational materials"
+      },
+      "cad": {
+        "title": "CAD & Design Tools",
+        "description": "Software and resources for ROV design"
+      },
+      "hydrodynamics": {
+        "title": "Hydrodynamics Basics",
+        "description": "Understanding underwater physics and fluid dynamics"
+      },
+      "safety": {
+        "title": "Safety & Competition Rules",
+        "description": "Safety guidelines and competition regulations"
+      }
+    }
+  },
+  "files": {
+    "title": "Team Files",
+    "subtitle": "Competition documents and materials",
+    "required": {
+      "title": "Required",
+      "technicalReport": {
+        "title": "Technical Design Report",
+        "objective": "Objective: Communicate intentional design process",
+        "description": "Description of SeaPerch ROV for 2026",
+        "download": "Download PDF"
+      },
+      "teamIntroduction": {
+        "title": "Team Introduction",
+        "description": "Team logo, description, character, values, and social media links",
+        "upload": "Digital Upload"
+      }
+    },
+    "optional": {
+      "title": "Optional",
+      "note": "Note: This section is not evaluated but may be considered for special awards",
+      "poster": {
+        "title": "Real-World Application Poster",
+        "description": "Digital poster (PowerPoint / PDF) describing real-world applications of underwater ROV",
+        "upload": "Upload Poster"
+      },
+      "outreach": {
+        "title": "Community Outreach",
+        "description": "One-page PDF with photos, videos, and description of community contribution",
+        "upload": "Upload Document"
+      }
+    }
+  },
+  "footer": {
+    "team": "Nomadic Guardians",
+    "location": "Astana, Kazakhstan",
+    "followUs": "Follow Us",
+    "contact": "Contact"
+  },
+  "common": {
+    "language": "Language",
+    "loading": "Loading...",
+    "error": "Error",
+    "back": "Back"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "login": "Login",
+    "logout": "Logout",
+    "password": "Password",
+    "sponsorManagement": "Sponsor Management",
+    "fileManagement": "File Management",
+    "uploadFile": "Upload File",
+    "save": "Save"
+  }
+}
+
