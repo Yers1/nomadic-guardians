@@ -1,4 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
 import { getTranslations } from 'next-intl/server';
+
 
 export default async function TelegramBotPage({
   params: { locale }
@@ -53,7 +55,8 @@ export default async function TelegramBotPage({
           <div className="space-y-3">
             {(t.raw('examples.items') as string[]).map((question, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-4 border-l-4 border-blue-500">
-                <p className="text-gray-700">"{question}"</p>
+                <p className="text-gray-700">{question}</p>
+
               </div>
             ))}
           </div>
