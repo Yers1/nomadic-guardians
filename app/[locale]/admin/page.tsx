@@ -6,9 +6,6 @@ import Image from 'next/image';
 
 const ADMIN_PASSWORD = 'ramazantop1mentor';
 
-// Force dynamic rendering for admin page
-export const dynamic = 'force-dynamic';
-
 export default function AdminPage() {
   const router = useRouter();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
