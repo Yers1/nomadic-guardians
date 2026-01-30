@@ -277,27 +277,36 @@ export default function AdminPage() {
               </div>
 
               {teamPhotos.length > 0 && (
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-                  {teamPhotos.map((photoUrl, index) => (
-                    <div key={index} className="relative group">
-                      <Image
-                        src={photoUrl}
-                        alt={`Team photo ${index + 1}`}
-                        width={200}
-                        height={200}
-                        className="w-full h-48 object-cover rounded-lg"
-                        unoptimized
-                      />
-                      <button
-                        onClick={() => handlePhotoDelete(photoUrl)}
-                        className="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-600"
-                      >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </button>
-                    </div>
-                  ))}
+                <div className="mt-4">
+                  <p className="text-sm text-gray-600 mb-3">
+                    Наведите на фотографию и нажмите кнопку удаления / Hover over photo and click delete button
+                  </p>
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {teamPhotos.map((photoUrl, index) => (
+                      <div key={index} className="relative group border-2 border-gray-200 rounded-lg overflow-hidden hover:border-red-400 transition-colors">
+                        <Image
+                          src={photoUrl}
+                          alt={`Team photo ${index + 1}`}
+                          width={200}
+                          height={200}
+                          className="w-full h-48 object-cover"
+                          unoptimized
+                        />
+                        <button
+                          onClick={() => handlePhotoDelete(photoUrl)}
+                          className="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full opacity-80 group-hover:opacity-100 transition-opacity hover:bg-red-600 shadow-lg"
+                          title="Удалить / Delete"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
+                        <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-xs p-1 text-center opacity-0 group-hover:opacity-100 transition-opacity">
+                          Фото {index + 1} / Photo {index + 1}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
