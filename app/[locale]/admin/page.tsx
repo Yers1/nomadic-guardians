@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 const ADMIN_PASSWORD = 'ramazantop1mentor';
 
+// Force dynamic rendering for admin page
+export const dynamic = 'force-dynamic';
+
 export default function AdminPage() {
-  const t = useTranslations('admin');
   const router = useRouter();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
