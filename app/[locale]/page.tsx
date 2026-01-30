@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import SponsorSection from '@/components/SponsorSection';
+import TeamPhotos from '@/components/TeamPhotos';
 
 export default async function HomePage({
   params: { locale }
@@ -88,6 +89,9 @@ export default async function HomePage({
 
       {/* Sponsor Section */}
       <SponsorSection />
+
+      {/* Team Photos */}
+      <TeamPhotos />
 
       {/* Quick Links */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

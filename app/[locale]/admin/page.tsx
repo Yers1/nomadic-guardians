@@ -17,7 +17,10 @@ export default function AdminPage() {
     logo: null as File | null,
     logoUrl: '',
   });
+  const [teamPhotos, setTeamPhotos] = useState<string[]>([]);
+  const [newPhoto, setNewPhoto] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
+  const [photoLoading, setPhotoLoading] = useState(false);
 
   useEffect(() => {
     // Проверяем аутентификацию
@@ -37,6 +40,18 @@ export default function AdminPage() {
       }
     } catch (error) {
       console.error('Error loading sponsor data:', error);
+    }
+  };
+
+  const loadTeamPhotos = async () => {
+    try {
+      const response = await fetch('/api/team-photos');
+      if (response.ok) {
+        const data = await response.json();
+        setTeamPhotos(data.photos || []);
+      }
+    } catch (error) {
+      console.error('Error loading team photos:', error);
     }
   };
 
@@ -225,6 +240,67 @@ export default function AdminPage() {
                 {loading ? 'Сохранение...' : 'Сохранить / Save'}
               </button>
             </form>
+          </section>
+
+          {/* Team Photos Management */}
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">
+              Фотографии команды / Team Photos
+            </h2>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Загрузить фотографию команды / Upload Team Photo
+                </label>
+                <div className="flex gap-2">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+                      if (file) {
+                        setNewPhoto(file);
+                      }
+                    }}
+                    className="flex-1 px-4 py-2 border border-gray-300 rounded-lg"
+                  />
+                  {newPhoto && (
+                    <button
+                      onClick={handlePhotoUpload}
+                      disabled={photoLoading}
+                      className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors disabled:opacity-50"
+                    >
+                      {photoLoading ? 'Загрузка...' : 'Загрузить / Upload'}
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {teamPhotos.length > 0 && (
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+                  {teamPhotos.map((photoUrl, index) => (
+                    <div key={index} className="relative group">
+                      <Image
+                        src={photoUrl}
+                        alt={`Team photo ${index + 1}`}
+                        width={200}
+                        height={200}
+                        className="w-full h-48 object-cover rounded-lg"
+                        unoptimized
+                      />
+                      <button
+                        onClick={() => handlePhotoDelete(photoUrl)}
+                        className="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-600"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </section>
 
           {/* File Management Link */}

@@ -175,10 +175,10 @@ export default function FilesManager() {
 
       {/* Required Section */}
       <section className="mb-12">
-        <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6 rounded-r-lg">
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
           <h2 className="text-3xl font-bold text-gray-900">{t('required.title')}</h2>
           <p className="text-gray-600 mt-2">
-            These documents are mandatory for competition participation.
+            {t('required.description')}
           </p>
         </div>
 

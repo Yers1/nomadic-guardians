@@ -10,7 +10,7 @@
   "home": {
     "title": "Nomadic Guardians",
     "subtitle": "SeaPerch West Asia 2026",
-    "status": "The only team representing Central Asia",
+    "status": "Team from Astana, Kazakhstan",
     "description": "We are Nomadic Guardians, a school STEM team specializing in underwater robotics, participating in international SeaPerch West Asia 2026 competitions.",
     "mission": {
       "title": "Mission",
@@ -112,9 +112,10 @@
   },
   "files": {
     "title": "Team Files",
-    "subtitle": "Competition documents and materials",
+    "subtitle": "Our team files in public access",
     "required": {
-      "title": "Required",
+      "title": "Team Files",
+      "description": "Files of our Nomadic Guardians team in public access",
       "technicalReport": {
         "title": "Technical Design Report",
         "objective": "Objective: Communicate intentional design process",
