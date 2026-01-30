@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import SponsorSection from '@/components/SponsorSection';
 
 export default async function HomePage({
@@ -7,6 +8,7 @@ export default async function HomePage({
 }: {
   params: { locale: string };
 }) {
+  setRequestLocale(locale);
   const t = await getTranslations('home');
 
   return (

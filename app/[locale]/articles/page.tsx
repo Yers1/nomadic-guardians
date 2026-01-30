@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import ArticleCard from '@/components/ArticleCard';
 
 // This would typically come from a database or CMS
@@ -21,6 +22,7 @@ export default async function ArticlesPage({
 }: {
   params: { locale: string };
 }) {
+  setRequestLocale(locale);
   const t = await getTranslations('articles');
 
   return (

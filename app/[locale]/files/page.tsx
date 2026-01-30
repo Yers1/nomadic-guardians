@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import FilesManager from '@/components/FilesManager';
 
 export default async function FilesPage({
@@ -6,6 +7,7 @@ export default async function FilesPage({
 }: {
   params: { locale: string };
 }) {
+  setRequestLocale(locale);
   const t = await getTranslations('files');
 
   return (

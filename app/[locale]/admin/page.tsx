@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 const ADMIN_PASSWORD = 'ramazantop1mentor';
 
@@ -200,10 +201,13 @@ export default function AdminPage() {
                 {sponsorData.logoUrl && (
                   <div className="mt-4">
                     <p className="text-sm text-gray-600 mb-2">Текущий логотип:</p>
-                    <img
+                    <Image
                       src={sponsorData.logoUrl}
                       alt="Sponsor logo"
+                      width={96}
+                      height={96}
                       className="h-24 object-contain"
+                      unoptimized
                     />
                   </div>
                 )}

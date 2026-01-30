@@ -1,10 +1,12 @@
 import { getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 
 export default async function ResourcesPage({
   params: { locale }
 }: {
   params: { locale: string };
 }) {
+  setRequestLocale(locale);
   const t = await getTranslations('resources');
 
   const categories = [

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface SponsorData {
   name: string;
@@ -54,9 +55,11 @@ export default function SponsorSection() {
           )}
           {sponsor.logoUrl && (
             <div className="mt-8 flex justify-center">
-              <img
+              <Image
                 src={sponsor.logoUrl}
                 alt={sponsor.name || 'Sponsor logo'}
+                width={200}
+                height={128}
                 className="max-h-32 object-contain"
               />
             </div>

@@ -1,12 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import { getTranslations } from 'next-intl/server';
-
+import { setRequestLocale } from 'next-intl/server';
 
 export default async function TelegramBotPage({
   params: { locale }
 }: {
   params: { locale: string };
 }) {
+  setRequestLocale(locale);
   const t = await getTranslations('telegramBot');
 
   return (
